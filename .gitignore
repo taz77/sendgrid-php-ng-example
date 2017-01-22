@@ -3,3 +3,4 @@
 !.env.example
 composer.lock
 vendor
+config.inc
