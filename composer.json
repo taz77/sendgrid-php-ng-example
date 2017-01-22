@@ -4,7 +4,20 @@
   "version": "0.0.1",
   "homepage": "https://github.com/taz77/sendgrid-php-ng-example",
   "license": "MIT",
-  "keywords": ["SendGrid", "sendgrid", "email", "send", "grid", "php"],
+  "keywords": [
+    "SendGrid",
+    "sendgrid",
+    "email",
+    "send",
+    "grid"
+  ],
+  "authors": [
+    {
+      "name": "Brady Owens",
+      "email": "brady@fastglass.net",
+      "homepage": "https://github.com/taz77"
+    }
+  ],
   "require": {
     "fastglass/sendgrid": ">=1.0.6",
     "vlucas/phpdotenv": "1.0.*",
