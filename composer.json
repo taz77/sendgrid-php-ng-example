@@ -1,13 +1,12 @@
 {
-  "name": "sendgrid-php-example",
-  "description": "Example of using the SendGrid php library.",
+  "name": "sendgrid-php-ng-example",
+  "description": "Example of using the SendGrid PHP library.",
   "version": "0.0.1",
-  "homepage": "http://github.com/scottmotte/sendgrid-php-example",
+  "homepage": "https://github.com/taz77/sendgrid-php-ng-example",
   "license": "MIT",
   "keywords": ["SendGrid", "sendgrid", "email", "send", "grid", "php"],
   "require": {
-    "sendgrid/sendgrid": "2.1.1",
-    "sendgrid/smtpapi": "0.0.1",
+    "fastglass/sendgrid": ">=1.0.6"
     "vlucas/phpdotenv": "1.0.*",
     "swiftmailer/swiftmailer": "v5.0.3"
   }
