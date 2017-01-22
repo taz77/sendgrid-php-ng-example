@@ -2,11 +2,10 @@
 require 'vendor/autoload.php';
 require_once 'config/config.inc';
 
-$sendgrid_username = $config['SENDGRID_USERNAME'];
-$sendgrid_password = $config['SENDGRID_PASSWORD'];
+$sendgrid_api_key = $config['KEY'];
 $to = $config['TO'];
 
-$sendgrid = new SendGrid($sendgrid_username, $sendgrid_password, ["turn_off_ssl_verification" => TRUE]);
+$sendgrid = new SendGrid($sendgrid_username, ["turn_off_ssl_verification" => TRUE]);
 $email = new SendGrid\Email();
 $email->addTo($to)
   ->setFrom($to)

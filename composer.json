@@ -19,7 +19,6 @@
     }
   ],
   "require": {
-    "fastglass/sendgrid": ">=1.0.6",
-    "swiftmailer/swiftmailer": "v5.0.3"
+    "fastglass/sendgrid": ">=1.0.6"
   }
 }
