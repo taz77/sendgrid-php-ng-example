@@ -1,6 +1,5 @@
 .DS_Store
-.env*
-!.env.example
 composer.lock
 vendor
 config.inc
+.idea
