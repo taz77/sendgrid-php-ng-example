@@ -1,11 +1,13 @@
 # sendgrid-php-example
 
-This is an example of using the [SendGrid php library](https://github.com/sendgrid/sendgrid-php).
+This is an example of using the [SendGrid NG PHP library](https://github.com/taz77/sendgrid-php-ng).
+
+Use this code as a kick start to your own application or to test the library and your account.
 
 ## Usage
 
 ```bash
-git clone https://github.com/sendgrid/sendgrid-php-example.git
+git clone https://github.com/taz77/sendgrid-php-ng-example
 cd sendgrid-php-example
 cp .env.example .env
 composer install
