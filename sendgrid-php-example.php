@@ -1,23 +1,23 @@
 <?php
 require 'vendor/autoload.php';
-Dotenv::load(__DIR__);
+require_once 'config/config.inc';
 
-$sendgrid_username = $_ENV['SENDGRID_USERNAME'];
-$sendgrid_password = $_ENV['SENDGRID_PASSWORD'];
-$to                = $_ENV['TO'];
+$sendgrid_username = $config['SENDGRID_USERNAME'];
+$sendgrid_password = $config['SENDGRID_PASSWORD'];
+$to = $config['TO'];
 
-$sendgrid = new SendGrid($sendgrid_username, $sendgrid_password, array("turn_off_ssl_verification" => true));
-$email    = new SendGrid\Email();
-$email->addTo($to)->
-       setFrom($to)->
-       setSubject('[sendgrid-php-ng-example] Owl named %yourname%')->
-       setText('Owl are you doing?')->
-       setHtml('<strong>%how% are you doing?</strong>')->
-       addSubstitution("%yourname%", array("Mr. Owl"))->
-       addSubstitution("%how%", array("Owl"))->
-       addHeader('X-Sent-Using', 'SendGrid-API')->
-       addHeader('X-Transport', 'web')->
-       addAttachment('./gif.gif', 'owl.gif');
+$sendgrid = new SendGrid($sendgrid_username, $sendgrid_password, ["turn_off_ssl_verification" => TRUE]);
+$email = new SendGrid\Email();
+$email->addTo($to)
+  ->setFrom($to)
+  ->setSubject('[sendgrid-php-ng-example] Owl named %yourname%')
+  ->setText('Owl are you doing?')
+  ->setHtml('<strong>%how% are you doing?</strong>')
+  ->addSubstitution("%yourname%", ["Mr. Owl"])
+  ->addSubstitution("%how%", ["Owl"])
+  ->addHeader('X-Sent-Using', 'SendGrid-API')
+  ->addHeader('X-Transport', 'web')
+  ->addAttachment('./gif.gif', 'owl.gif');
 
 $response = $sendgrid->send($email);
 var_dump($response);

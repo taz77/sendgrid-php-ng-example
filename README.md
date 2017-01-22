@@ -14,4 +14,5 @@ composer install
 php -f sendgrid-php-example.php
 php -f smtp-php-example.php
 ```
-Make sure to set username, password and recipient in the `.env` file. If you're not sure why they're stored in the `.env` file you can read up on it [here](http://12factor.net/config).
+Set the username and password in the config/config.inc file. An example config.example.inc
+file is provided as a template.
